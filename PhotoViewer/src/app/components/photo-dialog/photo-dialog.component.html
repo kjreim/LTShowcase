@@ -1,0 +1,7 @@
+<h1 mat-dialog-title>{{photo.title}}</h1>
+<mat-dialog-content>
+  <img ngOptimizedImage src="{{photo.url}}" alt="Photo" width="100%" height="100%">
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onCloseDialog()">Close</button>
+</mat-dialog-actions>

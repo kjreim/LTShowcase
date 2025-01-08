@@ -1,0 +1,16 @@
+<section class="album-photos">
+@for (item of getPhotosToDisplay(); track $index) {
+    <mat-card (click)="onImageClick(item)">
+        <mat-card-header>
+            <mat-card-subtitle>
+                <h1>{{item.title}}</h1>
+            </mat-card-subtitle>
+        </mat-card-header>
+        @if(!imageLoaded){
+            <mat-icon [svgIcon]="'profile-default'"></mat-icon>
+        }
+        <img #albumPhoto ngOptimizedImage mat-card-lg-image src="{{item.url}}" alt="Photo" (load)="imageLoaded = true" [hidden]="!imageLoaded">
+          
+    </mat-card>
+}
+</section>

@@ -1,0 +1,6 @@
+@LTApi_HostAddress = http://localhost:5290
+
+GET {{LTApi_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,14 @@
+<mat-toolbar class="header-toolbar">
+    <h1 (click)="onHeaderClick()">LT Photo Viewer</h1>
+    <span class="spacer"></span>
+    <button mat-icon-button [mat-menu-trigger-for]="themeMenu">
+        <mat-icon>{{selectedThemeIcon()}}</mat-icon>
+    </button>
+    <mat-menu #themeMenu="matMenu">
+        @for (theme of themes; track $index){
+            <button mat-menu-item (click)="onThemeChange(theme)">
+                {{theme.name | titlecase}}
+            </button>
+        }
+    </mat-menu>
+</mat-toolbar>

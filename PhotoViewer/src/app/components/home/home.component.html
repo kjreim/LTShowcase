@@ -1,0 +1,20 @@
+<section class="search">
+    <form [formGroup]="formGroup">
+        <mat-form-field>
+            <input matInput placeholder="Search by Photo Name" [formControl]="albumSearchForm"/>
+        </mat-form-field>
+    </form>
+</section>
+<section class="results">
+    @for (album of (filteredAlbums$ | async); track $index) {
+        <mat-card appearance="outlined">
+            <mat-card-title>
+                <h1 class="title">{{album.albumId}}</h1>
+            </mat-card-title>
+            <app-photo [photos]="album.photos"></app-photo>
+            <mat-card-actions>
+                <a mat-flat-button [routerLink]="['album/detail/', album.albumId]">View All</a>
+            </mat-card-actions>
+        </mat-card>
+    }
+</section>

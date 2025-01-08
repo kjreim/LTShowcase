@@ -1,0 +1,6 @@
+<section class="album-detail">
+  <mat-card appearance="outlined">
+    <app-photo [photos]="(album$ | async)?.photos" [detailed]="true"></app-photo>
+      
+  </mat-card>
+</section>
