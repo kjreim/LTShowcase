@@ -18,12 +18,13 @@ After cloning the repository locally there will be two main folders
  - PhotoViewer
    - Angular 19 application with Angular Materials for viewing the albums
 
-## Api set
+## Api setup
 
 - open a command console and navigate to the LTApi folder
 - run 'dotnet run LTApi.csproj /p:Configuration=Debug /p:Platform="AnyCPU"'
 - The api will be listening to port 5290
 - 'http://localhost:5290/swagger/index.html' will open the swagger UI and allow you to view the API's and schemas
+- The app settings json files (appsettings.json and appsettings.Development.json) will have to have the LT header and api settings added
 
 ## UI setup
 
